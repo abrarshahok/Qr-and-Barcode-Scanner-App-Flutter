@@ -18,7 +18,7 @@ The app utilizes the device's camera to capture QR codes and barcodes, providing
 
 Follow these instructions to get started with the QR and Barcode Scanner app:
 
-1. Clone this repository: `git clone https://github.com/your-username/qr_and_barcode_scanner.git`
+1. Clone this repository: `git clone https://github.com/abrar-ahmed-21bscs20/qr-and-barcode-scanner-flutter.git`
 2. Navigate to the project directory: `cd qr_and_barcode_scanner`
 3. Install dependencies: `flutter pub get`
 4. Run the app: `flutter run`
