@@ -31,7 +31,7 @@ class _AppScreenState extends State<AppScreen> {
     super.initState();
   }
 
-  int _currentIndex = 0;
+  int _currentIndex = 1;
   void _changePageIndex(int index) {
     setState(() {
       _currentIndex = index;
@@ -41,15 +41,17 @@ class _AppScreenState extends State<AppScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          _pages[_currentIndex]['title'] as String,
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
-        backgroundColor: const Color.fromRGBO(52, 58, 64, 1),
-        elevation: 5,
-        centerTitle: true,
-      ),
+      appBar: _currentIndex == 2
+          ? null
+          : AppBar(
+              title: Text(
+                _pages[_currentIndex]['title'] as String,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              backgroundColor: const Color.fromRGBO(52, 58, 64, 1),
+              elevation: 5,
+              centerTitle: true,
+            ),
       backgroundColor: const Color.fromRGBO(52, 58, 64, 1),
       body: _pages[_currentIndex]['page'] as Widget,
       bottomNavigationBar: Card(
@@ -76,7 +78,7 @@ class _AppScreenState extends State<AppScreen> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.qr_code,
+                  Icons.qr_code_scanner,
                   color: Color.fromRGBO(146, 224, 0, 1),
                 ),
                 label: 'Scan',

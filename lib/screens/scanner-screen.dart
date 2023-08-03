@@ -18,7 +18,7 @@ class ScannerScreen extends StatelessWidget {
               color: const Color.fromRGBO(146, 224, 0, 1),
               onPressed: () {},
               icon: const Icon(
-                Icons.qr_code,
+                Icons.qr_code_scanner,
               ),
             ),
             const Text(

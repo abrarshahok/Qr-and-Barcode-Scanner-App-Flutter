@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:qr_and_barcode_scanner/models.dart/qr-info-provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class QrGeneratorScreen extends StatefulWidget {
@@ -9,6 +11,34 @@ class QrGeneratorScreen extends StatefulWidget {
 class _QrGeneratorScreenState extends State<QrGeneratorScreen> {
   final controller = TextEditingController();
   String qrString = '';
+
+  void _saveQrCodeInfo() {
+    Provider.of<QrInfo>(context, listen: false).saveInfo(qrString);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text(
+          'QR Info saved successfully',
+          style: TextStyle(fontSize: 15, fontFamily: 'Quicksand'),
+        ),
+        backgroundColor: const Color.fromRGBO(146, 224, 0, 1),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        duration: const Duration(seconds: 2),
+        action: SnackBarAction(
+          label: 'Dismiss',
+          textColor: Colors.white,
+          onPressed: () {
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+          },
+        ),
+      ),
+    );
+    setState(() {
+      controller.text = '';
+      qrString = '';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +51,7 @@ class _QrGeneratorScreenState extends State<QrGeneratorScreen> {
               const SizedBox(height: 50),
               QrImageView(
                 data: qrString,
-                size: 300,
+                size: 200,
                 backgroundColor: Colors.white,
               ),
               const SizedBox(height: 50),
@@ -29,7 +59,7 @@ class _QrGeneratorScreenState extends State<QrGeneratorScreen> {
                 padding: const EdgeInsets.all(5),
                 child: TextField(
                   decoration: const InputDecoration(
-                    labelText: 'Enter something...',
+                    labelText: 'Enter some data...',
                     labelStyle: TextStyle(color: Colors.white),
                     focusColor: Colors.white,
                     border: OutlineInputBorder(
@@ -54,6 +84,15 @@ class _QrGeneratorScreenState extends State<QrGeneratorScreen> {
                     });
                   },
                 ),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromRGBO(146, 224, 0, 1),
+                ),
+                onPressed: (controller.text.isEmpty || qrString.isEmpty)
+                    ? null
+                    : _saveQrCodeInfo,
+                child: const Text('Save QR'),
               ),
             ],
           ),

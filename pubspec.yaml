@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_barcode_scanner: ^2.0.0
   qr_flutter: ^4.1.0
+  shared_preferences: ^2.2.0
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
