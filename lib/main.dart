@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:qr_and_barcode_scanner/widgets/scan-result.dart';
 import '/models.dart/qr-info-provider.dart';
 import 'screens/app-screen.dart';
 
@@ -12,10 +13,12 @@ void main() {
       SystemUiOverlay.bottom,
     ],
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -32,7 +35,10 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home: AppScreen(),
+        home: const AppScreen(),
+        routes: {
+          ScanResult.routeName: (context) => const ScanResult(),
+        },
       ),
     );
   }

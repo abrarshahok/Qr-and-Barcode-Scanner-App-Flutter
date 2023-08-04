@@ -13,7 +13,7 @@ class GeneratedQrScreen extends StatelessWidget {
       future: qrData.getInfo(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else if (snapshot.hasError) {
           return Center(child: Text('Error: ${snapshot.error}'));
         } else {
@@ -23,7 +23,7 @@ class GeneratedQrScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('QR String:'),
+                const Text('QR String:'),
                 Text(qrString),
               ],
             ),

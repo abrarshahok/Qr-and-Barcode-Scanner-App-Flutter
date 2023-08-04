@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '/screens/qr-generator-screen.dart';
-import '/screens/history-screen.dart';
+import 'qr-history-screen.dart';
 import '/screens/scanner-screen.dart';
 
 class AppScreen extends StatefulWidget {
@@ -17,15 +17,15 @@ class _AppScreenState extends State<AppScreen> {
     _pages = [
       {
         'title': 'Generate QR',
-        'page': QrGeneratorScreen(),
+        'page': const QrGeneratorScreen(),
       },
       {
         'title': 'Scan QR',
-        'page': ScannerScreen(),
+        'page': const ScannerScreen(),
       },
       {
         'title': 'History',
-        'page': const HistoryScreen(),
+        'page': const QrHistoryScreen(),
       },
     ];
     super.initState();
@@ -68,6 +68,7 @@ class _AppScreenState extends State<AppScreen> {
             iconSize: 50,
             unselectedItemColor: Colors.grey,
             backgroundColor: const Color.fromRGBO(52, 58, 64, 1),
+            selectedFontSize: 15,
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(

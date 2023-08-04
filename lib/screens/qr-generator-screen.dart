@@ -4,6 +4,8 @@ import 'package:qr_and_barcode_scanner/models.dart/qr-info-provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class QrGeneratorScreen extends StatefulWidget {
+  const QrGeneratorScreen({super.key});
+
   @override
   State<QrGeneratorScreen> createState() => _QrGeneratorScreenState();
 }

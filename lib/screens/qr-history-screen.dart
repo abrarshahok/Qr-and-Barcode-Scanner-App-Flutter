@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qr_and_barcode_scanner/screens/generated_qr_screen.dart';
 
-class HistoryScreen extends StatelessWidget {
+class QrHistoryScreen extends StatelessWidget {
   static const routeName = '/scanner-screen';
-  const HistoryScreen({super.key});
+  const QrHistoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
