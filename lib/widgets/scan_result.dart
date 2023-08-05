@@ -8,6 +8,8 @@ import 'package:image_gallery_saver/image_gallery_saver.dart';
 class ScanResult extends StatelessWidget {
   static const routeName = '/scan-result';
 
+  ScanResult({super.key});
+
   void _copyToClipboard(BuildContext context, String result) {
     Clipboard.setData(
       ClipboardData(text: result),

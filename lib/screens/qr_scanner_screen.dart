@@ -8,9 +8,12 @@ import '/widgets/scan_result.dart';
 import 'package:scan/scan.dart';
 import '../widgets/scanner_camera.dart';
 
+// ignore: must_be_immutable
 class ScannerScreen extends StatelessWidget {
+  ScannerScreen({super.key});
   File? image;
   String? decodedString;
+
   Future<void> pickImage(BuildContext context) async {
     final pickedFile =
         await ImagePicker().pickImage(source: ImageSource.gallery);

@@ -9,7 +9,7 @@ class QrItems extends StatelessWidget {
   final String info;
   final DateTime dateTime;
   final IconData icon;
-  const QrItems({
+  const QrItems({super.key, 
     required this.id,
     required this.info,
     required this.dateTime,
