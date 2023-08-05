@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         home: const AppScreen(),
         routes: {
-          ScanResult.routeName: (context) => const ScanResult(),
+          ScanResult.routeName: (context) => ScanResult(),
           ScannerCamera.routeName: (context) => const ScannerCamera(),
         },
       ),

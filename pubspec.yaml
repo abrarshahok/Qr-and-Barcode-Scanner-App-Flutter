@@ -41,6 +41,8 @@ dependencies:
   qr_code_scanner: ^1.0.1
   intl: ^0.18.1
   flutter_launcher_icons: ^0.13.1
+  screenshot: ^2.1.0
+  image_gallery_saver: ^2.0.3
 
 dev_dependencies:
   flutter_test:

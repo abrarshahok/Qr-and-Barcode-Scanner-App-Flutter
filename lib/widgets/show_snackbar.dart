@@ -17,7 +17,7 @@ class ShowSnackBar {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         duration: const Duration(seconds: 2),
         action: SnackBarAction(
-          label: 'Dismiss',
+          label: 'Okay!',
           textColor: Colors.white,
           onPressed: () {
             hide.hideCurrentSnackBar();

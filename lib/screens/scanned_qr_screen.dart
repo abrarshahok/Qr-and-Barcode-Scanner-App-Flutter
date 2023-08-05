@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../models.dart/qr_info_provider.dart';
 import '../widgets/qr_items.dart';
 
@@ -29,6 +28,7 @@ class ScannedQrScreen extends StatelessWidget {
                 id: infoList[index].id,
                 info: infoList[index].info,
                 dateTime: infoList[index].dateTime,
+                icon: Icons.qr_code_scanner,
               );
             },
           );

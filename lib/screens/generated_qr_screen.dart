@@ -28,6 +28,7 @@ class GeneratedQrScreen extends StatelessWidget {
                 id: infoList[index].id,
                 info: infoList[index].info,
                 dateTime: infoList[index].dateTime,
+                icon: Icons.qr_code_rounded,
               );
             },
           );

@@ -8,10 +8,12 @@ class QrItems extends StatelessWidget {
   final String id;
   final String info;
   final DateTime dateTime;
+  final IconData icon;
   const QrItems({
     required this.id,
     required this.info,
     required this.dateTime,
+    required this.icon,
   });
 
   String get formatedDateTime =>
@@ -25,9 +27,9 @@ class QrItems extends StatelessWidget {
       margin: const EdgeInsets.all(15),
       child: ListTile(
         textColor: Colors.white,
-        leading: const Icon(
-          Icons.qr_code_rounded,
-          color: Color.fromRGBO(146, 224, 0, 1),
+        leading: Icon(
+          icon,
+          color: const Color.fromRGBO(146, 224, 0, 1),
         ),
         title: Text(
           info,
