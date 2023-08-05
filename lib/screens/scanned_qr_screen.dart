@@ -8,7 +8,7 @@ class ScannedQrScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final qrData = Provider.of<GeneratedQrInfo>(context);
+    final qrData = Provider.of<QrInfo>(context);
     final infoList = qrData.scannedQrInfoList;
     qrData.getQRInfo();
     return infoList.isEmpty

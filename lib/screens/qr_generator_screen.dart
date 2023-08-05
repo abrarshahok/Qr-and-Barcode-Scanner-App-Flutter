@@ -19,12 +19,16 @@ class _QrGeneratorScreenState extends State<QrGeneratorScreen> {
     if (qrString.isEmpty) {
       return;
     }
-    Provider.of<GeneratedQrInfo>(context, listen: false).saveQRInfo(
+    Provider.of<QrInfo>(context, listen: false).saveQRInfo(
       id: DateTime.now().toString(),
       info: qrString,
       dateTime: DateTime.now(),
     );
-    ShowSnackBar(context: context, label: 'QR Info saved successfully').show();
+    ShowSnackBar(
+      context: context,
+      label: 'QR Info saved successfully',
+      color: const Color.fromRGBO(146, 224, 0, 1),
+    ).show();
     setState(() {
       controller.text = '';
       qrString = '';

@@ -45,7 +45,7 @@ class QrItems extends StatelessWidget {
         ),
         trailing: IconButton(
           onPressed: () {
-            Provider.of<GeneratedQrInfo>(
+            Provider.of<QrInfo>(
               context,
               listen: false,
             ).deleteQRInfo(id);

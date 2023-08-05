@@ -92,8 +92,9 @@ class _ScannerCameraState extends State<ScannerCamera> {
     ShowSnackBar(
       context: context,
       label: 'QR Code scanned successfully',
+      color: const Color.fromRGBO(146, 224, 0, 1),
     ).show();
-    Provider.of<GeneratedQrInfo>(context, listen: false).saveQRInfo(
+    Provider.of<QrInfo>(context, listen: false).saveQRInfo(
       id: DateTime.now().toString(),
       info: result?.code as String,
       dateTime: DateTime.now(),

@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'qr_info_model.dart';
 
-class GeneratedQrInfo with ChangeNotifier {
+class QrInfo with ChangeNotifier {
   final List<QrInfoItem> _genQrInfoList = [];
   final List<QrInfoItem> _scannedQrInfoList = [];
 

@@ -43,6 +43,9 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   screenshot: ^2.1.0
   image_gallery_saver: ^2.0.3
+  image_picker: ^1.0.2
+  barcode_scanner: ^3.6.1
+  scan: ^1.6.0
 
 dev_dependencies:
   flutter_test:

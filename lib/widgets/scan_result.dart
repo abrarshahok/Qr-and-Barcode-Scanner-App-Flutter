@@ -15,6 +15,7 @@ class ScanResult extends StatelessWidget {
     ShowSnackBar(
       context: context,
       label: 'Content saved to clipboard successfully',
+      color: const Color.fromRGBO(146, 224, 0, 1),
     ).show();
   }
 
@@ -25,15 +26,21 @@ class ScanResult extends StatelessWidget {
       ShowSnackBar(
         context: context,
         label: 'Image successfully saved to Gallery',
+        color: const Color.fromRGBO(146, 224, 0, 1),
       ).show();
     }).catchError((_) {
-      ShowSnackBar(context: context, label: 'An error occured!').show();
+      ShowSnackBar(
+        context: context,
+        label: 'An error occured!',
+        color: Colors.red,
+      ).show();
     });
   }
 
   @override
   Widget build(BuildContext context) {
     final result = ModalRoute.of(context)?.settings.arguments as String;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Result'),
@@ -51,6 +58,7 @@ class ScanResult extends StatelessWidget {
                 data: result,
                 size: 200,
                 backgroundColor: Colors.white,
+                gapless: false,
               ),
             ),
             const SizedBox(height: 20),
@@ -66,6 +74,7 @@ class ScanResult extends StatelessWidget {
                     children: [
                       Text(
                         result,
+                        textAlign: TextAlign.justify,
                         style: const TextStyle(
                           fontSize: 15,
                           color: Colors.white,

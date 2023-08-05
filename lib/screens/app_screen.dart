@@ -21,7 +21,7 @@ class _AppScreenState extends State<AppScreen> {
       },
       {
         'title': 'Scan QR',
-        'page': const ScannerScreen(),
+        'page': ScannerScreen(),
       },
       {
         'title': 'History',
