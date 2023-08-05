@@ -15,7 +15,7 @@ class ScannedQrScreen extends StatelessWidget {
     return infoList.isEmpty
         ? const Center(
             child: Text(
-              'No generated QR Codes!',
+              'No Scanned QR Codes!',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,
