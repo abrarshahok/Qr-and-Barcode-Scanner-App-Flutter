@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../widgets/qr_items.dart';
-import '../models.dart/generated-qr-info-provider.dart';
+import '../models.dart/qr_info_provider.dart';
 
 class GeneratedQrScreen extends StatelessWidget {
   const GeneratedQrScreen({Key? key}) : super(key: key);
@@ -9,8 +9,9 @@ class GeneratedQrScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final qrData = Provider.of<GeneratedQrInfo>(context);
-    qrData.getGenQRInfo();
-    return qrData.infoList.isEmpty
+    final infoList = qrData.genQrInfoList;
+    qrData.getQRInfo();
+    return infoList.isEmpty
         ? const Center(
             child: Text(
               'No generated QR Codes!',
@@ -21,13 +22,12 @@ class GeneratedQrScreen extends StatelessWidget {
             ),
           )
         : ListView.builder(
-            itemCount: qrData.infoList.length,
+            itemCount: infoList.length,
             itemBuilder: (ctx, index) {
               return QrItems(
-                key: ValueKey(qrData.infoList[index].id),
-                id: qrData.infoList[index].id,
-                info: qrData.infoList[index].info,
-                dateTime: qrData.infoList[index].dateTime,
+                id: infoList[index].id,
+                info: infoList[index].info,
+                dateTime: infoList[index].dateTime,
               );
             },
           );

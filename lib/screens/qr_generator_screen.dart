@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../models.dart/generated-qr-info-provider.dart';
+import '../models.dart/qr_info_provider.dart';
 import '/widgets/show_snackbar.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -19,7 +19,7 @@ class _QrGeneratorScreenState extends State<QrGeneratorScreen> {
     if (qrString.isEmpty) {
       return;
     }
-    Provider.of<GeneratedQrInfo>(context, listen: false).saveGenQRInfo(
+    Provider.of<GeneratedQrInfo>(context, listen: false).saveQRInfo(
       id: DateTime.now().toString(),
       info: qrString,
       dateTime: DateTime.now(),

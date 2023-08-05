@@ -1,3 +1,5 @@
+import 'package:provider/provider.dart';
+import 'package:qr_and_barcode_scanner/models.dart/qr_info_provider.dart';
 
 import 'scan_result.dart';
 import '/widgets/show_snackbar.dart';
@@ -91,6 +93,12 @@ class _ScannerCameraState extends State<ScannerCamera> {
       context: context,
       label: 'QR Code scanned successfully',
     ).show();
+    Provider.of<GeneratedQrInfo>(context, listen: false).saveQRInfo(
+      id: DateTime.now().toString(),
+      info: result?.code as String,
+      dateTime: DateTime.now(),
+      isScan: true,
+    );
   }
 
   @override

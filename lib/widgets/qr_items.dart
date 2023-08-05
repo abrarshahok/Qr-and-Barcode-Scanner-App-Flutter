@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import '../models.dart/generated-qr-info-provider.dart';
+import '../models.dart/qr_info_provider.dart';
 import 'scan_result.dart';
 
 class QrItems extends StatelessWidget {
@@ -9,7 +9,6 @@ class QrItems extends StatelessWidget {
   final String info;
   final DateTime dateTime;
   const QrItems({
-    super.key,
     required this.id,
     required this.info,
     required this.dateTime,
@@ -44,8 +43,10 @@ class QrItems extends StatelessWidget {
         ),
         trailing: IconButton(
           onPressed: () {
-            Provider.of<GeneratedQrInfo>(context, listen: false)
-                .deleteQRInfo(id);
+            Provider.of<GeneratedQrInfo>(
+              context,
+              listen: false,
+            ).deleteQRInfo(id);
           },
           icon: const Icon(
             Icons.delete,

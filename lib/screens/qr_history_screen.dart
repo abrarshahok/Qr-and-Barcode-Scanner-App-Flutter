@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '/screens/scanned_qr_screen.dart';
+// import '/screens/scanned_qr_screen.dart';
 import '/screens/generated_qr_screen.dart';
+import 'scanned_qr_screen.dart';
 
 class QrHistoryScreen extends StatelessWidget {
   static const routeName = '/scanner-screen';
