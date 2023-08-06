@@ -35,20 +35,14 @@ Follow these instructions to get started with the QR and Barcode Scanner app:
 
 The app uses the following Flutter packages:
 
-- `flutter_camera`: Provides camera integration.
-- `barcode_decoder`: Enables barcode decoding functionality.
-- `provider`: Manages state and data.
+- `flutter_barcode_scanner`: Provides Functionality to scan QR Code.
+- `qr_flutter`: Provides Functionality to preview QR Code.
+- `image_gallery_saver`: Provides Functionality to save QR code image to gallery.
+- `image_picker`: Provides Functionality pick image from galley.
+- `scan`: Provides Functionality to decode QR Code image picked from galley.
+- `shared_preferences`: Provides Functionality to save data to device storage.
 
 For detailed information about dependencies, refer to the `pubspec.yaml` file.
-
-## Contributions
-
-Contributions are welcome! If you find any issues or would like to enhance the app's functionality, feel free to open a pull request. Please make sure to follow the coding standards and guidelines.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 Happy Scanning!
