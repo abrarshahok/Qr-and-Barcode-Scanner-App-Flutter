@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../models.dart/qr_info_provider.dart';
+import '../providers/qr_info_provider.dart';
 import '/widgets/show_snackbar.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 

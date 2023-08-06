@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../widgets/qr_items.dart';
-import '../models.dart/qr_info_provider.dart';
+import '../providers/qr_info_provider.dart';
 
 class GeneratedQrScreen extends StatelessWidget {
   const GeneratedQrScreen({Key? key}) : super(key: key);

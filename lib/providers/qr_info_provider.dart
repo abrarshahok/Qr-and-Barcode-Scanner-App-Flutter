@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'qr_info_model.dart';
+import 'qr_info.dart';
 
 class QrInfo with ChangeNotifier {
   final List<QrInfoItem> _genQrInfoList = [];

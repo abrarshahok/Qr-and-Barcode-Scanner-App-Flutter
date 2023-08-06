@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'widgets/scan_result.dart';
 import 'widgets/scanner_camera.dart';
-import 'models.dart/qr_info_provider.dart';
+import 'providers/qr_info_provider.dart';
 import 'screens/app_screen.dart';
 
 void main() {

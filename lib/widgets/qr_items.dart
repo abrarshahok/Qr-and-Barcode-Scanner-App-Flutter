@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import '../models.dart/qr_info_provider.dart';
+import '../providers/qr_info_provider.dart';
 import 'scan_result.dart';
 
 class QrItems extends StatelessWidget {

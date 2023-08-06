@@ -1,5 +1,5 @@
 import 'package:provider/provider.dart';
-import 'package:qr_and_barcode_scanner/models.dart/qr_info_provider.dart';
+import 'package:qr_and_barcode_scanner/providers/qr_info_provider.dart';
 
 import 'scan_result.dart';
 import '/widgets/show_snackbar.dart';

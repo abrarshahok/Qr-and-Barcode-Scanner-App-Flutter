@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import '/models.dart/qr_info_provider.dart';
+import '../providers/qr_info_provider.dart';
 import '/widgets/show_snackbar.dart';
 import '/widgets/scan_result.dart';
 import 'package:scan/scan.dart';
