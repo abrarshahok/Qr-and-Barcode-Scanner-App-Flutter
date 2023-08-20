@@ -9,7 +9,8 @@ class QrItems extends StatelessWidget {
   final String info;
   final DateTime dateTime;
   final IconData icon;
-  const QrItems({super.key, 
+  const QrItems({
+    super.key,
     required this.id,
     required this.info,
     required this.dateTime,
@@ -24,7 +25,7 @@ class QrItems extends StatelessWidget {
     return Card(
       color: const Color.fromRGBO(52, 58, 64, 1),
       elevation: 10,
-      margin: const EdgeInsets.all(15),
+      margin: const EdgeInsets.all(20),
       child: ListTile(
         textColor: Colors.white,
         leading: Icon(

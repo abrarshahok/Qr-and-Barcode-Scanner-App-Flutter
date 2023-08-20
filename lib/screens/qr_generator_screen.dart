@@ -55,7 +55,7 @@ class _QrGeneratorScreenState extends State<QrGeneratorScreen> {
               ),
               const SizedBox(height: 50),
               Padding(
-                padding: const EdgeInsets.all(5),
+                padding: const EdgeInsets.all(25),
                 child: TextField(
                   maxLines: 5,
                   cursorColor: Colors.white,

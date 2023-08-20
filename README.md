@@ -7,13 +7,7 @@ The app utilizes the device's camera to capture QR codes and barcodes, providing
 
 ## ScreenShots
 <div align="center">
-  <img src="/Screenshots/01.jpg" alt="Screenshot 1" title="Screenshot of Main UI" height="400" />
-  <img src="/Screenshots/02.jpg" alt="Screenshot 2" title="Screenshot of QR Code Generator Screen" height="400" />
-</div>
-<br>
-<div align="center">
-  <img src="/Screenshots/03.jpg" alt="Screenshot 3" title="Screenshot of Scanned QR History" height="400" />
-  <img src="/Screenshots/04.jpg" alt="Screenshot 4" title="Screenshot of Generated QR History" height="400" />
+  <img src="/Preview/QR_Code_Scanner_App.png" alt="Screenshot 1" title="Screenshot of Main UI"/>
 </div>
 
 ## Features
