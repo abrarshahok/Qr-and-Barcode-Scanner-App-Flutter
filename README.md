@@ -5,9 +5,9 @@
 This Flutter project is a QR and Barcode Scanner app designed to simplify and enhance the process of scanning and decoding QR codes and barcodes. 
 The app utilizes the device's camera to capture QR codes and barcodes, providing a seamless and efficient user experience.
 
-## ScreenShots
+## App Preview
 <div align="center">
-  <img src="/Preview/QR_Code_Scanner_App.png" alt="Screenshot 1" title="Screenshot of Main UI"/>
+  <img src="/Preview/QR_Code_Scanner_App.png" alt="Qr Code Scanner" title="App Preview"/>
 </div>
 
 ## Features
