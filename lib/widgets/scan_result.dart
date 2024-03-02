@@ -1,3 +1,6 @@
+import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import '/widgets/show_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -45,7 +48,11 @@ class ScanResult extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Result'),
+        title: Text(
+          'Result',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(52, 58, 64, 1),
       ),
@@ -70,20 +77,26 @@ class ScanResult extends StatelessWidget {
               child: Card(
                 color: const Color.fromRGBO(52, 58, 64, 1),
                 elevation: 10,
-                child: Padding(
+                child: ListView(
                   padding: const EdgeInsets.all(8.0),
-                  child: ListView(
-                    children: [
-                      Text(
-                        result,
-                        textAlign: TextAlign.justify,
-                        style: const TextStyle(
-                          fontSize: 15,
-                          color: Colors.white,
-                        ),
+                  children: [
+                    Linkify(
+                      linkStyle: const TextStyle(
+                        fontSize: 15,
+                        color: Color.fromRGBO(146, 224, 0, 1),
                       ),
-                    ],
-                  ),
+                      onOpen: (link) async {
+                        final url = Uri.parse(link.url);
+                        await launchUrl(url);
+                      },
+                      text: result,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.justify,
+                    ),
+                  ],
                 ),
               ),
             ),

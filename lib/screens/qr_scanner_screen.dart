@@ -17,9 +17,10 @@ class ScannerScreen extends StatelessWidget {
   Future<void> pickImage(BuildContext context) async {
     final pickedFile =
         await ImagePicker().pickImage(source: ImageSource.gallery);
-    if (pickedFile != null) {
-      image = File(pickedFile.path);
+    if (pickedFile == null) {
+      return;
     }
+    image = File(pickedFile.path);
     decodedString = await Scan.parse(image!.path);
   }
 

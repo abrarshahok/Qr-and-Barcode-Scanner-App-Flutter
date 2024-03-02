@@ -8,12 +8,12 @@ import 'screens/app_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.manual,
-    overlays: [
-      SystemUiOverlay.bottom,
-    ],
-  );
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Color.fromRGBO(52, 58, 64, 1),
+    statusBarIconBrightness: Brightness.light,
+    systemNavigationBarColor: Color.fromRGBO(52, 58, 64, 1),
+    systemNavigationBarIconBrightness: Brightness.light,
+  ));
   runApp(const MyApp());
 }
 

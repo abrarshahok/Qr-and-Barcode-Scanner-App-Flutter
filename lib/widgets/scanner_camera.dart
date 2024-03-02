@@ -123,7 +123,11 @@ class _ScannerCameraState extends State<ScannerCamera> {
       backgroundColor: const Color.fromRGBO(52, 58, 64, 1),
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(52, 58, 64, 1),
-        title: const Text('Back'),
+        title: Text(
+          'Back',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Stack(
         alignment: Alignment.center,
